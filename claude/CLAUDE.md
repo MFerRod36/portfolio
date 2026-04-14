@@ -1,5 +1,9 @@
 # Portfolio — Fernanda Rodriguez
 
+## Brand Manual
+
+Antes de diseñar o proponer cualquier elemento visual, leer @BRAND.md
+
 ## Proyecto
 
 Landing page + portfolio personal. Marca propia.
