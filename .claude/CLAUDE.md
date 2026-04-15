@@ -56,12 +56,29 @@ Servicios: Desarrollo Web + Marketing Digital/CM.
 - No importar desde features/ entre sí
 - No escribir código sin diseño aprobado primero
 
-## Flujo de trabajo por sección
+## Flujo de trabajo por componente
 
-1. ux-landing-designer → diseña y aprueba
-2. react-component-builder → construye
-3. accessibility-auditor → revisa WCAG
-4. git-workflow-manager → commit
+### Fase 1 — Diseño
+
+Use ux-landing-designer to propose visual design
+→ Esperar aprobación explícita antes de continuar
+
+### Fase 2 — Implementación
+
+Use react-component-builder to implement the approved design
+→ Read ~/.claude/skills/react-19/SKILL.md
+→ Read ~/.claude/skills/tailwind-4/SKILL.md
+
+### Fase 3 — Accesibilidad
+
+Use accessibility-auditor to check WCAG compliance
+→ Si hay problemas: use react-component-builder to fix them
+
+### Fase 4 — Commit
+
+Use commit-pr-specialist to commit
+→ Formato: feat|fix|style|refactor|docs(scope): descripción
+→ Nunca mencionar Claude ni IA
 
 ## Commits
 

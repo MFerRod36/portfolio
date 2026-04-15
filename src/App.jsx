@@ -1,11 +1,15 @@
+import HeroSection from './features/hero/HeroSection';
+import { NavbarContainer } from './shared/components/NavbarContainer';
+
 function App() {
   return (
-    <main>
-      <h1 className="text-3xl font-bold text-center p-8">
-        Portfolio — En construcción
-      </h1>
-    </main>
-  )
+    <>
+      <NavbarContainer />
+      <main id="main-content">
+        <HeroSection />
+      </main>
+    </>
+  );
 }
 
-export default App
+export default App;
