@@ -1,14 +1,27 @@
+import { LangProvider } from './shared/context/LangContext';
 import HeroSection from './features/hero/HeroSection';
-import { NavbarContainer } from './shared/components/NavbarContainer';
+import AboutSection from './features/about/AboutSection';
+import ServicesSection from './features/services/ServicesSection';
+import ContactSection from './features/contact/ContactSection';
+import { Navbar } from './layout/navbar/NavbarContainer';
+import { Footer } from './layout/footer/Footer';
+import { BackgroundGrid } from './shared/components/BackgroundGrid';
 
 function App() {
   return (
-    <>
-      <NavbarContainer />
+    <LangProvider>
+      <Navbar />
       <main id="main-content">
-        <HeroSection />
+        <div className="relative bg-page">
+          <BackgroundGrid />
+          <HeroSection />
+          <AboutSection />
+          <ServicesSection />
+          <ContactSection />
+        </div>
       </main>
-    </>
+      <Footer />
+    </LangProvider>
   );
 }
 
