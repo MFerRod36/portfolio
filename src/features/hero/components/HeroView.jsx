@@ -1,31 +1,42 @@
-import HeroDecoration from './HeroDecoration'
+import { CtaButton } from '../../../shared/components/CtaButton'
+import SocialIcons from './SocialIcons'
 
-function HeroView({ badge, headingLine, subtitle, cta: { href, label } }) {
+function HeroView({ badge, headingLines, subtitle, cta: { href, label } }) {
   return (
     <section
-      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-hero-gradient"
+      id="home"
+      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden"
     >
-      <HeroDecoration />
+      <SocialIcons />
 
       <div className="relative z-10 flex flex-col items-center text-center px-6 md:px-8 gap-6">
-        <p className="text-xs uppercase tracking-display font-medium text-accent font-display">
+        <p className="text-xs uppercase tracking-wide-display font-medium text-accent font-display">
           {badge}
         </p>
 
-        <h1 className="font-display font-bold leading-none tracking-tight text-5xl md:text-7xl xl:text-8xl text-text">
-          {headingLine}
+        <h1 className="leading-none tracking-tight text-5xl md:text-7xl xl:text-8xl text-text">
+          {headingLines.map(({ text, style }) => (
+            <span
+              key={text}
+              className={[
+                'block',
+                style === 'mencken'
+                  ? 'font-mencken italic font-normal text-accent'
+                  : 'font-display font-bold',
+              ].join(' ')}
+            >
+              {text}
+            </span>
+          ))}
         </h1>
 
-        <p className="text-base md:text-lg text-text/70 font-sans">
-          {subtitle}
-        </p>
+        <div className="flex flex-col items-center gap-10 mt-6">
+          <p className="max-w-2xl text-sm md:text-base text-text/70 font-sans">
+            {subtitle}
+          </p>
 
-        <a
-          href={href}
-          className="mt-4 inline-flex items-center justify-center rounded-sm bg-accent px-8 py-3 font-semibold text-bg font-display transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text"
-        >
-          {label}
-        </a>
+          <CtaButton href={href}>{label}</CtaButton>
+        </div>
       </div>
     </section>
   )
