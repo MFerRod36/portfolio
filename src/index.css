@@ -6,16 +6,22 @@
   --color-text: #f5f5f7;
 
   --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mencken: 'mencken-text', serif;
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
 
-  --gradient-hero: linear-gradient(135deg, #1a2123 0%, #2a3336 50%, #1a2123 100%);
+  --gradient-page: linear-gradient(135deg, #0d1618 0%, #2a3336 50%, #0d1618 100%);
   --tracking-wide-display: 0.2em;
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 :root {
   --color-bg: #2a3336;
   --color-accent: #ff8053;
   --color-text: #f5f5f7;
+}
+
+@utility bg-page {
+  background-image: var(--gradient-page);
 }
 
 html,

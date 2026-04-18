@@ -23,12 +23,12 @@
 
 ## Tipografía
 
-| Rol           | Fuente        | Peso          | Uso                     |
-| ------------- | ------------- | ------------- | ----------------------- |
-| Display       | Space Grotesk | 700 (bold)    | H1, H2, CTAs            |
-| UI            | Space Grotesk | 500 (medium)  | H3, labels, nav         |
-| Body          | Inter         | 400 (regular) | Párrafos, descripciones |
-| Body emphasis | Inter         | 500 (medium)  | Destacados en cuerpo    |
+| Rol           | Fuente                  | Peso          | Uso                     |
+| ------------- | ----------------------- | ------------- | ----------------------- |
+| Display       | Space Grotesk - Mencken | 700 (bold)    | H1, H2, CTAs            |
+| UI            | Space Grotesk - Mencken | 500 (medium)  | H3, labels, nav         |
+| Body          | Inter                   | 400 (regular) | Párrafos, descripciones |
+| Body emphasis | Inter                   | 500 (medium)  | Destacados en cuerpo    |
 
 **Reglas:**
 
@@ -57,3 +57,7 @@
 - No usar más de 2 fuentes
 - No crampar elementos — el espacio es parte del diseño
 - No CTAs vagos ("Click aquí", "Ver más") — siempre acción específica
+
+## Texto para sección ABOUT:
+
+A los 30 años recalibré mi carrera por completo. Dejé atrás los call centers para profesionalizarme en la construcción de productos digitales, una decisión de crecimiento enfocada en la intersección entre la lógica técnica y la estrategia visual. Hoy, desde Córdoba y operando a nivel global, mi trabajo se centra en garantizar la paridad absoluta entre el diseño de alta fidelidad y la integridad del código, eliminando cualquier fricción que comprometa la escalabilidad de un proyecto. En paralelo, desarrollo identidades y estrategias de comunicación para profesionales que necesitan que su presencia digital tenga un sustento real y no solo una estética prolija. Entiendo la tecnología y el branding como herramientas de negocio: si una solución no es funcional o no cumple un objetivo de impacto, no forma parte de mi proceso.
