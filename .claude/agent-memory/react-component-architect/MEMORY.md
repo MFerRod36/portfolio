@@ -1,0 +1,2 @@
+- [CtaButton shared component](project_cta_button.md) — CTA primitive vive en shared/, usado por Hero y pensado para reuso en Services/About/Contact.
+- [Tailwind 4 theme tokens](project_theme_tokens.md) — tokens del @theme en index.css: bg, accent, text, fonts, gradient-hero.
