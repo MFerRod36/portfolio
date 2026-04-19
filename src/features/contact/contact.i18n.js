@@ -20,7 +20,7 @@ export const contactContent = {
     required: 'Requerido',
     optional: 'Opcional',
     selectOne: 'Seleccioná al menos una opción',
-    submit: 'Enviar mensaje',
+    submit: 'Enviar',
     sending: 'Enviando...',
     successTitle: '¡Mensaje enviado!',
     successBody: 'Te voy a responder a la brevedad.',
@@ -53,6 +53,11 @@ export const contactContent = {
     successTitle: 'Message sent!',
     successBody: "I'll get back to you shortly.",
     errorMessage: 'Something went wrong. Please try again.',
-    services: ['Web Development', 'Digital Marketing', 'Branding & CM', 'Other'],
+    services: [
+      'Web Development',
+      'Digital Marketing',
+      'Branding & CM',
+      'Other',
+    ],
   },
 }
