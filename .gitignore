@@ -17,6 +17,7 @@ dist-ssr
 backend/.env
 backend/node_modules/
 .claude/settings.local.json
+.claude/agent-memory/
 EOF
 
 # Editor directories and files

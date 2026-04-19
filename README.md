@@ -1,16 +1,29 @@
-# React + Vite
+# Fernanda Rodriguez — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Desarrolladora Web & Diseñadora UX/UI · Córdoba, Argentina · Operando a nivel global
 
-Currently, two official plugins are available:
+Sitio personal que reúne mis servicios de desarrollo web y estrategia digital. Diseñado con foco en la paridad entre diseño de alta fidelidad y calidad de código.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Servicios
 
-## React Compiler
+- **Desarrollo Web** — Interfaces modulares, escalables y accesibles
+- **Marketing Digital & CM** — Identidades visuales y estrategia de crecimiento en redes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Stack
 
-## Expanding the ESLint configuration
+| Capa | Tecnología |
+|---|---|
+| Frontend | React 19 + Vite + JavaScript |
+| Estilos | Tailwind CSS 4 |
+| Backend | Node.js + Express |
+| Deploy | Vercel (frontend) · Render (backend) |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Redes
+
+[![GitHub](https://img.shields.io/badge/GitHub-MFerRod36-2a3336?style=flat&logo=github&logoColor=ff8053)](https://github.com/MFerRod36)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-fernanda--rodriguez036-2a3336?style=flat&logo=linkedin&logoColor=ff8053)](https://www.linkedin.com/in/fernanda-rodriguez036/)
+[![Instagram](https://img.shields.io/badge/Instagram-codencontent-2a3336?style=flat&logo=instagram&logoColor=ff8053)](https://www.instagram.com/codencontent/)
+
+## Contacto
+
+[rodriguezfer2811@gmail.com](mailto:rodriguezfer2811@gmail.com)
