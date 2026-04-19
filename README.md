@@ -15,8 +15,8 @@ Sitio personal que reúne mis servicios de desarrollo web y estrategia digital. 
 |---|---|
 | Frontend | React 19 + Vite + JavaScript |
 | Estilos | Tailwind CSS 4 |
-| Backend | Node.js + Express |
-| Deploy | Vercel (frontend) · Render (backend) |
+| Backend | Vercel Serverless Functions + Resend |
+| Deploy | Vercel |
 
 ## Redes
 
