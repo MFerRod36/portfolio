@@ -1,6 +1,7 @@
 import { useLang } from '../../shared/context/useLang';
 import { SOCIAL_LINKS } from '../../shared/config/socials';
 import { NAV_ITEMS } from '../../shared/config/nav';
+import { CONTACT_EMAIL } from '../../shared/config/contact';
 import { layoutContent } from '../layout.i18n';
 import { FooterView } from './FooterView';
 
@@ -11,7 +12,7 @@ export function Footer() {
 
   return (
     <FooterView
-      email={import.meta.env.VITE_CONTACT_EMAIL}
+      email={CONTACT_EMAIL}
       socialLinks={SOCIAL_LINKS}
       navItems={navItems}
       labels={content.footer}
