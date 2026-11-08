@@ -7,54 +7,76 @@
 **Tagline:** Desarrolladora Web & Diseñadora UX/UI
 **Tono:** Profesional, directo, cercano. Sin frases genéricas.
 
-## Paleta de colores
+## Paleta de colores (60 / 30 / 10)
 
-| Token      | Hex       | CSS Variable     | Uso                          |
-| ---------- | --------- | ---------------- | ---------------------------- |
-| Background | `#2a3336` | `--color-bg`     | Fondo principal              |
-| Accent     | `#ff8053` | `--color-accent` | CTA, resaltes, links activos |
-| Text       | `#f5f5f7` | `--color-text`   | Títulos, texto principal     |
+| Token          | Hex       | Utility de Tailwind      | Proporción | Uso                                                        |
+| -------------- | --------- | ------------------------ | ---------- | ---------------------------------------------------------- |
+| Paper          | `#f4ead5` | `bg-paper`, `text-paper` | 60%        | Fondo dominante (Hero, About, Contact); texto sobre verde  |
+| Forest         | `#1e3b2f` | `bg-forest`, `text-forest` | 30%      | Navbar, Services y Footer; texto principal sobre crema     |
+| Accent         | `#ff8053` | `bg-accent`, `text-accent` | 10%      | Botones, detalles decorativos; texto solo sobre verde      |
+| Accent strong  | `#b23f18` | `text-accent-strong`     | —          | Naranja para texto chico y links **sobre crema**           |
+| Danger         | `#b42318` | `text-danger`            | —          | Mensajes de error sobre crema                              |
+
+Los tokens viven en `src/styles/tokens.css`. Cada color nuevo se agrega ahí y en esta tabla.
+
+### Contraste verificado (WCAG 2.1 AA)
+
+| Texto              | Fondo   | Ratio  | Uso permitido                         |
+| ------------------ | ------- | ------ | ------------------------------------- |
+| forest             | paper   | 10.2:1 | Todo                                  |
+| paper              | forest  | 10.2:1 | Todo                                  |
+| forest/75          | paper   | ~5.1:1 | Texto secundario (mínimo `/75`)       |
+| paper/70           | forest  | ~5.9:1 | Texto secundario sobre verde          |
+| accent             | forest  | 4.92:1 | Texto de cualquier tamaño             |
+| forest             | accent  | 4.92:1 | Texto de botones naranjas             |
+| accent-strong      | paper   | 4.86:1 | Etiquetas, links y resaltes sobre crema |
+| **accent**         | **paper** | **2.07:1** | **Nunca como texto ni foco sobre crema** |
 
 **Reglas:**
 
-- Nunca reemplazar estos colores por utilidades genéricas de Tailwind (zinc, amber, slate, etc.)
-- Siempre usar las CSS variables definidas en `src/index.css`
-- Degradés permitidos usando `#2a3336` como base
+- Nunca reemplazar estos colores por utilidades genéricas de Tailwind (zinc, amber, slate, red, white, etc.)
+- Usar siempre las utilities de los tokens (`bg-forest`), nunca hex sueltos ni `bg-[var(--color-x)]`
+- Sobre crema, el naranja `accent` solo va como relleno (botones) o decoración; el texto naranja usa `accent-strong`
+- Texto secundario con opacidad: mínimo `forest/75` sobre crema y `paper/70` sobre verde
+- Fondos planos, sin degradés
+- Anillo de foco: `outline-forest` sobre crema, `outline-accent` sobre verde
 
 ## Tipografía
 
-| Rol           | Fuente                  | Peso          | Uso                     |
-| ------------- | ----------------------- | ------------- | ----------------------- |
-| Display       | Space Grotesk - Mencken | 700 (bold)    | H1, H2, CTAs            |
-| UI            | Space Grotesk - Mencken | 500 (medium)  | H3, labels, nav         |
-| Body          | Inter                   | 400 (regular) | Párrafos, descripciones |
-| Body emphasis | Inter                   | 500 (medium)  | Destacados en cuerpo    |
+| Rol           | Fuente        | Peso          | Uso                                         |
+| ------------- | ------------- | ------------- | ------------------------------------------- |
+| Display       | Space Grotesk | 700 (bold)    | H1, H2, títulos de cards                     |
+| UI            | Space Grotesk | 500 / 600     | Labels, nav, botones                        |
+| Acento        | Mencken (Typekit) | 400 italic | Segunda línea del H1 del Hero (única excepción serif) |
+| Body          | Inter         | 400 (regular) | Párrafos, descripciones                     |
+| Body emphasis | Inter         | 500 (medium)  | Destacados en cuerpo                        |
 
 **Reglas:**
 
 - Máximo 3 tamaños tipográficos por sección
 - H1 hero: mínimo `text-5xl` en desktop
-- Nunca usar serif ni fuentes del sistema
+- Mencken solo en el acento del Hero; el resto del sitio es sans-serif
 
 ## Estilo visual
 
-- **Dirección:** Oscuro, minimal, editorial
+- **Dirección:** Claro y cálido con bloques verdes, minimal, editorial
 - **Elemento visual:** Abstracción geométrica. Sin fotos ni ilustraciones figurativas
-- **Decoración:** Grid sutil, formas geométricas simples, composición tipográfica
+- **Decoración:** Grid sutil (`BackgroundGrid`), formas geométricas simples, composición tipográfica
 - **Espaciado:** Generoso. `py-24` mínimo en secciones, `gap-8` mínimo entre elementos
-- **Bordes:** Sutiles, usando `#f5f5f7` con opacidad baja o `border-white/10`
+- **Bordes:** `border-forest/15` sobre crema, `border-paper/15` sobre verde
 
 ## Componentes UI
 
-- **Botón primario:** `bg-[#ff8053] text-[#2a3336] font-semibold` con Space Grotesk
-- **Botón secundario:** `border border-[#f5f5f7]/30 text-[#f5f5f7]`
-- **Badge/label:** `text-xs tracking-widest uppercase text-[#ff8053]`
+- **Botón primario (`CtaButton`):** `bg-accent text-forest font-semibold` con Space Grotesk, redondeado completo
+- **Botón secundario:** `border border-forest/30 text-forest` sobre crema, `border border-paper/30 text-paper` sobre verde
+- **Badge/label:** `text-xs tracking-wide-display uppercase`, `text-accent-strong` sobre crema y `text-accent` sobre verde
 
 ## Lo que NUNCA se hace
 
 - No usar colores de Tailwind genéricos en lugar de la paleta definida
+- No usar texto naranja `accent` sobre crema
 - No proponer fotos o ilustraciones figurativas
-- No usar más de 2 fuentes
+- No sumar fuentes fuera de Space Grotesk, Inter y el acento Mencken
 - No crampar elementos — el espacio es parte del diseño
 - No CTAs vagos ("Click aquí", "Ver más") — siempre acción específica
 
