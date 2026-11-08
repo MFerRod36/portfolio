@@ -3,7 +3,7 @@ import HeroSection from './features/hero/HeroSection';
 import AboutSection from './features/about/AboutSection';
 import ServicesSection from './features/services/ServicesSection';
 import ContactSection from './features/contact/ContactSection';
-import { Navbar } from './layout/navbar/NavbarContainer';
+import { Navbar } from './layout/navbar/Navbar';
 import { Footer } from './layout/footer/Footer';
 import { BackgroundGrid } from './shared/components/BackgroundGrid';
 

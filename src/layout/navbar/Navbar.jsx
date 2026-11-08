@@ -1,6 +1,6 @@
 import { useLang } from '../../shared/context/useLang';
 import { useNavbar } from './useNavbar';
-import { NavbarView } from './Navbar';
+import { NavbarView } from './NavbarView';
 import { NAV_ITEMS } from '../../shared/config/nav';
 import { SOCIAL_LINKS } from '../../shared/config/socials';
 

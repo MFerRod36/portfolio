@@ -44,7 +44,7 @@ export function NavbarView({
             return (
               <li
                 key={item.id}
-                ref={(el) => (navRefs.current[index] = el)}
+                ref={(el) => { navRefs.current[index] = el; }}
               >
                 <a
                   href={item.href}
