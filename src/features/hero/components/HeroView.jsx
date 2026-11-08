@@ -13,7 +13,7 @@ function HeroView({ badge, headingLines, subtitle, cta: { href, label }, portrai
             {badge}
           </p>
 
-          <h1 className="leading-none tracking-tight text-5xl md:text-6xl lg:text-7xl text-forest">
+          <h1 className="leading-none tracking-tight text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-forest">
             {headingLines.map(({ text, style }) => (
               <span
                 key={text}
