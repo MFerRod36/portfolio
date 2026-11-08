@@ -63,7 +63,7 @@ Los tokens viven en `src/styles/tokens.css`. Cada color nuevo se agrega ahí y e
 ## Estilo visual
 
 - **Dirección:** Claro y cálido con bloques verdes, minimal, editorial
-- **Elemento visual:** Abstracción geométrica. Sin fotos ni ilustraciones figurativas
+- **Elemento visual:** Abstracción geométrica. Única foto: un retrato de Fernanda en el Hero, dentro de un arco verde (`rounded-t-full`)
 - **Decoración:** Grid sutil (`BackgroundGrid`), formas geométricas simples, composición tipográfica
 - **Espaciado:** Generoso. `py-24` mínimo en secciones, `gap-8` mínimo entre elementos
 - **Bordes:** `border-forest/15` sobre crema, `border-paper/15` sobre verde
@@ -78,7 +78,7 @@ Los tokens viven en `src/styles/tokens.css`. Cada color nuevo se agrega ahí y e
 
 - No usar colores de Tailwind genéricos en lugar de la paleta definida
 - No usar texto naranja `accent` sobre crema
-- No proponer fotos o ilustraciones figurativas
+- No sumar otras fotos ni ilustraciones figurativas fuera del retrato del Hero
 - No sumar fuentes fuera de Space Grotesk, Inter y el acento Mencken
 - No crampar elementos — el espacio es parte del diseño
 - No CTAs vagos ("Click aquí", "Ver más") — siempre acción específica

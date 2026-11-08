@@ -2,10 +2,7 @@ import { SOCIAL_LINKS } from '../../../shared/config/socials';
 
 function SocialIcons() {
   return (
-    <div className="absolute right-8 bottom-12 hidden md:flex flex-col items-center gap-4">
-      <span aria-hidden="true" className="w-px h-12 bg-forest/20" />
-      <span aria-hidden="true" className="size-1 rounded-full bg-accent" />
-
+    <div className="flex items-center gap-5">
       {SOCIAL_LINKS.map(({ name, href, path }) => (
         <a
           key={name}
@@ -18,7 +15,7 @@ function SocialIcons() {
           <svg
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="size-4"
+            className="size-5"
             aria-hidden="true"
           >
             <path d={path} />
