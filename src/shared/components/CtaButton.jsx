@@ -9,19 +9,22 @@ const baseClasses = [
   'transition-[filter] duration-200',
   'hover:brightness-95',
   'active:brightness-90',
-  'focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-forest',
+  'focus-visible:outline-2 focus-visible:outline-offset-4',
   'cursor-pointer',
 ].join(' ')
 
 export function CtaButton({
   href,
   children,
+  surface = 'light',
   className = '',
   type = 'button',
   disabled = false,
 }) {
   const classes = [
     baseClasses,
+    // Focus ring must contrast with the section behind the button
+    surface === 'dark' ? 'focus-visible:outline-accent' : 'focus-visible:outline-forest',
     disabled ? 'opacity-60 pointer-events-none' : '',
     className,
   ]

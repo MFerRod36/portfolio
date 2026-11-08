@@ -11,11 +11,14 @@
 
 | Token          | Hex       | Utility de Tailwind      | Proporción | Uso                                                        |
 | -------------- | --------- | ------------------------ | ---------- | ---------------------------------------------------------- |
-| Paper          | `#f4ead5` | `bg-paper`, `text-paper` | 60%        | Fondo dominante (Hero, About, Contact); texto sobre verde  |
-| Forest         | `#1e3b2f` | `bg-forest`, `text-forest` | 30%      | Navbar, Services y Footer; texto principal sobre crema     |
+| Paper          | `#f4ead5` | `bg-paper`, `text-paper` | Dominante  | Fondo de Hero, Services y Footer; texto sobre verde        |
+| Forest         | `#1e3b2f` | `bg-forest`, `text-forest` | Secundario | Navbar, About y Contact; texto principal sobre crema     |
 | Accent         | `#ff8053` | `bg-accent`, `text-accent` | 10%      | Botones, detalles decorativos; texto solo sobre verde      |
 | Accent strong  | `#b23f18` | `text-accent-strong`     | —          | Naranja para texto chico y links **sobre crema**           |
-| Danger         | `#b42318` | `text-danger`            | —          | Mensajes de error sobre crema                              |
+| Danger         | `#b42318` | `text-danger`            | —          | Mensajes de error sobre crema (sobre verde se usa `text-accent`) |
+
+**Distribución de secciones:** se alternan para que cada una se separe de la siguiente:
+Hero (crema) → About (verde) → Services (crema) → Contact (verde) → Footer (crema). El Navbar flota en verde.
 
 Los tokens viven en `src/styles/tokens.css`. Cada color nuevo se agrega ahí y en esta tabla.
 
