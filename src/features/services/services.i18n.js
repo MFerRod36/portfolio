@@ -2,7 +2,6 @@ export const servicesContent = {
   es: {
     badge: 'Lo que construyo para vos',
     headingNeutral: 'SERVICIOS',
-    headingAccent: '',
     services: [
       {
         number: '01',
@@ -30,7 +29,6 @@ export const servicesContent = {
   en: {
     badge: 'What I build for you',
     headingNeutral: 'SERVICES',
-    headingAccent: '',
     services: [
       {
         number: '01',

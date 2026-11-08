@@ -17,11 +17,5 @@ export default defineConfig({
         "frame-ancestors 'none'",
       ].join('; '),
     },
-    proxy: {
-      '/api': {
-        target: 'http://localhost:3000',
-        changeOrigin: true,
-      },
-    },
   },
 })

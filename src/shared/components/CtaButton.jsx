@@ -1,13 +1,7 @@
-const sizeClasses = {
-  sm: 'px-6 py-2.5 text-xs md:text-sm',
-  md: 'px-8 py-3.5 text-sm md:text-base',
-  lg: 'px-10 py-4 text-base md:text-lg',
-}
-
 const baseClasses = [
   'inline-flex items-center justify-center gap-2',
-  'rounded-full',
-  'font-display font-semibold tracking-wide',
+  'px-8 py-3.5 rounded-full',
+  'font-display text-sm md:text-base font-semibold tracking-wide',
   'text-text',
   'border border-accent/40',
   'backdrop-blur-xl',
@@ -22,16 +16,13 @@ const baseClasses = [
 
 export function CtaButton({
   href,
-  onClick,
   children,
-  size = 'md',
   className = '',
   type = 'button',
   disabled = false,
 }) {
   const classes = [
     baseClasses,
-    sizeClasses[size],
     disabled ? 'opacity-60 pointer-events-none' : '',
     className,
   ]
@@ -47,7 +38,7 @@ export function CtaButton({
   }
 
   return (
-    <button type={type} onClick={onClick} disabled={disabled} className={classes}>
+    <button type={type} disabled={disabled} className={classes}>
       {children}
     </button>
   )

@@ -15,12 +15,12 @@ function ServicesView({ badge, headingNeutral, services, activeIndex, goTo, caro
         {/* Cards — carousel on mobile, grid on desktop */}
         <ul
           ref={carouselRef}
-          className="flex overflow-x-auto snap-x snap-mandatory gap-4 -mx-6 px-6 pr-6 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:mx-0 md:px-0 md:pr-0 md:pb-0"
+          className="flex overflow-x-auto snap-x snap-mandatory gap-4 -mx-6 px-6 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:mx-0 md:px-0 md:pb-0"
         >
           {services.map((service, index) => (
             <li
               key={service.number}
-              ref={(el) => (cardRefs.current[index] = el)}
+              ref={(el) => { cardRefs.current[index] = el }}
               className="relative flex flex-col shrink-0 w-[80vw] snap-start bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-300 md:w-auto md:shrink"
             >
               <span

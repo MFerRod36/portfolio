@@ -5,7 +5,7 @@ function HeroView({ badge, headingLines, subtitle, cta: { href, label } }) {
   return (
     <section
       id="home"
-      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative w-full min-h-svh flex items-center justify-center overflow-hidden"
     >
       <SocialIcons />
 

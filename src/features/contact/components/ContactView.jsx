@@ -132,7 +132,7 @@ function ContactView({
                   {content.fields.servicios} <span className="text-accent" aria-label="requerido">*</span>
                   <span className="block text-text/40 normal-case tracking-normal font-sans mt-0.5">{content.selectOne}</span>
                 </span>
-                <div className="flex flex-wrap gap-2 mt-1.5" role="group" aria-labelledby="servicios-label" aria-required="true">
+                <div className="flex flex-wrap gap-2 mt-1.5" role="group" aria-labelledby="servicios-label">
                   {content.services.map((service) => {
                     const active = selectedServices.includes(service)
                     return (
