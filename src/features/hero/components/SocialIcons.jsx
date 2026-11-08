@@ -2,7 +2,7 @@ import { SOCIAL_LINKS } from '../../../shared/config/socials';
 
 function SocialIcons() {
   return (
-    <div className="absolute right-8 bottom-12 z-20 hidden md:flex flex-col items-center gap-4">
+    <div className="hidden md:flex flex-col items-center gap-4">
       <span aria-hidden="true" className="w-px h-12 bg-forest/20" />
       <span aria-hidden="true" className="size-1 rounded-full bg-accent" />
 

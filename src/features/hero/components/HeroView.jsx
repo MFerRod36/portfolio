@@ -5,12 +5,9 @@ function HeroView({ badge, headingLines, subtitle, cta: { href, label }, portrai
   return (
     <section
       id="home"
-      className="relative w-full min-h-svh flex items-center overflow-hidden px-6 pt-28 pb-16 md:px-8"
+      className="relative w-full overflow-hidden px-6 pt-32 pb-20 md:px-8 md:pt-36 md:pb-24"
     >
-      <SocialIcons />
-
-      {/* md:pr-16 keeps the portrait clear of the floating social column */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 items-center gap-12 md:grid-cols-[11fr_9fr] md:gap-16 md:pr-16">
+      <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 items-center gap-12 md:grid-cols-[11fr_9fr_auto] md:gap-16">
         <div className="flex flex-col items-start gap-6 text-left">
           <p className="px-4 py-1.5 rounded-full bg-forest text-xs uppercase tracking-wide-display font-medium text-paper font-display">
             {badge}
@@ -42,7 +39,7 @@ function HeroView({ badge, headingLines, subtitle, cta: { href, label }, portrai
         </div>
 
         {/* Arch frame for the portrait; stays an empty forest shape until a photo is set */}
-        <div className="w-full max-w-xs mx-auto md:max-w-md md:mx-0 md:justify-self-end">
+        <div className="w-full max-w-xs mx-auto md:max-w-sm md:mx-0 md:justify-self-end">
           <div className="aspect-4/5 rounded-t-full bg-forest overflow-hidden">
             {portrait.src && (
               <img
@@ -53,6 +50,8 @@ function HeroView({ badge, headingLines, subtitle, cta: { href, label }, portrai
             )}
           </div>
         </div>
+
+        <SocialIcons />
       </div>
     </section>
   )
