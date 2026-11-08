@@ -7,10 +7,10 @@ function HeroSection() {
   const content = heroContent[lang]
 
   const viewModel = {
-    badge: 'Portfolio / 2026',
+    badge: content.badge,
     headingLines: [
-      { text: 'Web Designer', style: 'grotesk' },
-      { text: '& Developer.', style: 'mencken' },
+      { text: content.headingLines[0], style: 'grotesk' },
+      { text: content.headingLines[1], style: 'mencken' },
     ],
     subtitle: content.subtitle,
     cta: { label: content.cta, href: '#contact' },

@@ -1,6 +1,7 @@
+// Labels live in src/layout/layout.i18n.js, keyed by id
 export const NAV_ITEMS = [
-  { label: 'Home', href: '#home', id: 'home' },
-  { label: 'About', href: '#about', id: 'about' },
-  { label: 'Services', href: '#services', id: 'services' },
-  { label: 'Contact', href: '#contact', id: 'contact' },
+  { href: '#home', id: 'home' },
+  { href: '#about', id: 'about' },
+  { href: '#services', id: 'services' },
+  { href: '#contact', id: 'contact' },
 ];

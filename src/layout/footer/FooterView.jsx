@@ -1,4 +1,4 @@
-export function FooterView({ email, socialLinks, navItems }) {
+export function FooterView({ email, socialLinks, navItems, labels, year }) {
   return (
     <footer className="bg-page border-t border-white/10 py-16 px-6 md:px-8">
       <div className="max-w-7xl mx-auto">
@@ -43,9 +43,9 @@ export function FooterView({ email, socialLinks, navItems }) {
 
           <div>
             <p className="font-display text-xs uppercase tracking-wide-display text-accent mb-4">
-              Navegación
+              {labels.navHeading}
             </p>
-            <nav className="flex flex-col gap-3" aria-label="Footer">
+            <nav className="flex flex-col gap-3" aria-label={labels.navLabel}>
               {navItems.map((item) => (
                 <a
                   key={item.href}
@@ -61,7 +61,7 @@ export function FooterView({ email, socialLinks, navItems }) {
 
         <div className="border-t border-white/10 mt-12 pt-6">
           <p className="font-sans text-xs text-text/40 text-center">
-            © 2026 Fernanda Rodriguez. Todos los derechos reservados.
+            © {year} Fernanda Rodriguez. {labels.rights}
           </p>
         </div>
       </div>

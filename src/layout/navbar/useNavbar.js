@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { NAV_ITEMS } from '../../shared/config/nav';
 
-const NAV_IDS = ['home', 'about', 'services', 'contact'];
+const NAV_IDS = NAV_ITEMS.map((item) => item.id);
 
 export function useNavbar() {
   const [scrolled, setScrolled] = useState(false);

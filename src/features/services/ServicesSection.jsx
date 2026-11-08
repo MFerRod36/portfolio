@@ -12,6 +12,7 @@ function ServicesSection() {
     <ServicesView
       badge={content.badge}
       headingNeutral={content.headingNeutral}
+      slideLabel={content.slideLabel}
       services={content.services}
       {...carousel}
     />

@@ -1,4 +1,4 @@
-function ServicesView({ badge, headingNeutral, services, activeIndex, goTo, carouselRef, cardRefs }) {
+function ServicesView({ badge, headingNeutral, slideLabel, services, activeIndex, goTo, carouselRef, cardRefs }) {
   return (
     <section id="services" className="py-24 px-6 md:px-8">
       <div className="max-w-7xl mx-auto flex flex-col gap-12">
@@ -54,7 +54,7 @@ function ServicesView({ badge, headingNeutral, services, activeIndex, goTo, caro
               key={index}
               type="button"
               onClick={() => goTo(index)}
-              aria-label={`Ir a ${service.title} (${index + 1} de ${services.length})`}
+              aria-label={slideLabel(service.title, index + 1, services.length)}
               aria-current={activeIndex === index ? 'true' : undefined}
               className={[
                 'rounded-full transition-all duration-300',

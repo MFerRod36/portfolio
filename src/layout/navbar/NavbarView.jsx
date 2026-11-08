@@ -4,6 +4,7 @@ export function NavbarView({
   scrolled,
   activeSection,
   navItems,
+  labels,
   socialLinks,
   navRefs,
   bubbleRef,
@@ -75,7 +76,7 @@ export function NavbarView({
         {/* Right — hamburger (mobile only) */}
         <button
           type="button"
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-label={isMenuOpen ? labels.closeMenu : labels.openMenu}
           aria-expanded={isMenuOpen}
           onClick={toggleMenu}
           className="md:hidden ml-auto relative w-8 h-8 flex flex-col items-center justify-center gap-1.5 rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
@@ -112,7 +113,7 @@ export function NavbarView({
         <div className="px-6 pt-4 border-b border-white/8 pb-4">
           <LanguageSwitch lang={lang} onToggle={onToggle} />
         </div>
-        <nav aria-label="Mobile navigation">
+        <nav aria-label={labels.mobileNav}>
         <ul className="px-6">
           {navItems.map((item, index) => {
             const isActive = activeSection === item.id;

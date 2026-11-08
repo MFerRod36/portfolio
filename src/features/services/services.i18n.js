@@ -2,6 +2,7 @@ export const servicesContent = {
   es: {
     badge: 'Lo que construyo para vos',
     headingNeutral: 'SERVICIOS',
+    slideLabel: (title, current, total) => `Ir a ${title} (${current} de ${total})`,
     services: [
       {
         number: '01',
@@ -29,6 +30,7 @@ export const servicesContent = {
   en: {
     badge: 'What I build for you',
     headingNeutral: 'SERVICES',
+    slideLabel: (title, current, total) => `Go to ${title} (${current} of ${total})`,
     services: [
       {
         number: '01',

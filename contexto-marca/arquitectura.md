@@ -18,7 +18,8 @@ Los items del menú salen de `src/shared/config/nav.js`. Las redes, de `src/shar
 ## Idiomas
 
 Español e inglés. `LangContext` guarda el idioma activo y actualiza `<html lang>`.
-Cada feature tiene sus textos en `<feature>.i18n.js`; no se escriben textos sueltos en los componentes.
+Cada feature tiene sus textos en `<feature>.i18n.js`, y el menú y el footer en `src/layout/layout.i18n.js`.
+No se escriben textos sueltos en los componentes, tampoco los `aria-label`.
 
 ## Estructura de carpetas
 
@@ -37,6 +38,7 @@ src/
     use<Algo>.js          Hooks propios de la feature
     <nombre>.i18n.js      Textos ES/EN
   layout/                 Navbar y Footer (aparecen en toda la página)
+    layout.i18n.js        Textos ES/EN del menú y el footer
   shared/
     components/           Componentes usados por 2+ features (CtaButton, BackgroundGrid, LanguageSwitch)
     config/               Datos compartidos (nav, socials)

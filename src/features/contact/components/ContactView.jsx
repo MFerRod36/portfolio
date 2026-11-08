@@ -129,7 +129,7 @@ function ContactView({
 
               <div>
                 <span className={labelClasses} id="servicios-label">
-                  {content.fields.servicios} <span className="text-accent" aria-label="requerido">*</span>
+                  {content.fields.servicios} <span className="text-accent" aria-label={content.required}>*</span>
                   <span className="block text-text/40 normal-case tracking-normal font-sans mt-0.5">{content.selectOne}</span>
                 </span>
                 <div className="flex flex-wrap gap-2 mt-1.5" role="group" aria-labelledby="servicios-label">
