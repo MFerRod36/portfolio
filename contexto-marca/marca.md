@@ -70,7 +70,7 @@ Los tokens viven en `src/styles/tokens.css`. Cada color nuevo se agrega ahí y e
 
 ## Componentes UI
 
-- **Botón primario (`CtaButton`):** `bg-accent text-forest font-semibold` con Space Grotesk, redondeado completo
+- **Botón primario (`CtaButton`):** `bg-forest text-paper font-semibold` con Space Grotesk, redondeado completo. Sobre secciones verdes lleva borde `border-paper/60`
 - **Botón secundario:** `border border-forest/30 text-forest` sobre crema, `border border-paper/30 text-paper` sobre verde
 - **Badge/label:** `text-xs tracking-wide-display uppercase`, `text-accent-strong` sobre crema y `text-accent` sobre verde
 
