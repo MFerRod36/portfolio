@@ -10,7 +10,7 @@ function HeroView({ badge, headingLines, subtitle, cta: { href, label } }) {
       <SocialIcons />
 
       <div className="relative z-10 flex flex-col items-center text-center px-6 md:px-8 gap-6">
-        <p className="text-xs uppercase tracking-wide-display font-medium text-accent-strong font-display">
+        <p className="px-4 py-1.5 rounded-full bg-forest text-xs uppercase tracking-wide-display font-medium text-paper font-display">
           {badge}
         </p>
 
