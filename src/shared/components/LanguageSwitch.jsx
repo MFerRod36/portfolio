@@ -8,12 +8,12 @@ export function LanguageSwitch({ lang, onToggle }) {
       aria-checked={isEn}
       aria-label={isEn ? 'Switch to Spanish' : 'Cambiar a inglés'}
       onClick={onToggle}
-      className="relative flex h-7 w-14 rounded-full cursor-pointer bg-accent border border-accent hover:brightness-95 transition-[filter] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest"
+      className="relative flex h-8 w-16 rounded-full cursor-pointer bg-accent border border-accent hover:brightness-95 transition-[filter] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest"
     >
       {/* Pearl — rectangular, covers exactly half the pill */}
       <span
         aria-hidden="true"
-        className={`absolute top-[3px] left-[3px] w-[calc(50%-6px)] h-[calc(100%-6px)] rounded-full bg-forest border border-forest shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_1px_3px_rgba(0,0,0,0.2)] [transition:transform_280ms_var(--ease-spring)] ${isEn ? 'translate-x-7' : 'translate-x-0'}`}
+        className={`absolute top-1 left-1 w-[calc(50%-8px)] h-[calc(100%-8px)] rounded-full bg-forest border border-forest shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_1px_3px_rgba(0,0,0,0.2)] [transition:transform_280ms_var(--ease-spring)] ${isEn ? 'translate-x-8' : 'translate-x-0'}`}
       />
 
       {/* Labels — flex-1 centers each one in its own half */}
