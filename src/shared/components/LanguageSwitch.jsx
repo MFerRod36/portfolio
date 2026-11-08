@@ -13,7 +13,7 @@ export function LanguageSwitch({ lang, onToggle }) {
       {/* Pearl — rectangular, covers exactly half the pill */}
       <span
         aria-hidden="true"
-        className={`absolute top-[3px] left-[3px] w-[calc(50%-6px)] h-[calc(100%-6px)] rounded-full bg-paper/30 border border-paper/50 shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_1px_3px_rgba(0,0,0,0.2)] [transition:transform_280ms_var(--ease-spring)] ${isEn ? 'translate-x-7' : 'translate-x-0'}`}
+        className={`absolute top-[3px] left-[3px] w-[calc(50%-6px)] h-[calc(100%-6px)] rounded-full bg-forest border border-forest shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_1px_3px_rgba(0,0,0,0.2)] [transition:transform_280ms_var(--ease-spring)] ${isEn ? 'translate-x-7' : 'translate-x-0'}`}
       />
 
       {/* Labels — flex-1 centers each one in its own half */}
@@ -22,7 +22,7 @@ export function LanguageSwitch({ lang, onToggle }) {
           'relative z-10 flex-1 flex items-center justify-center',
           'font-display text-[10px] font-semibold tracking-widest uppercase',
           'transition-colors duration-200',
-          isEn ? 'text-paper/80' : 'text-paper',
+          isEn ? 'text-forest' : 'text-paper',
         ].join(' ')}
       >
         ES
@@ -32,7 +32,7 @@ export function LanguageSwitch({ lang, onToggle }) {
           'relative z-10 flex-1 flex items-center justify-center',
           'font-display text-[10px] font-semibold tracking-widest uppercase',
           'transition-colors duration-200',
-          isEn ? 'text-paper' : 'text-paper/80',
+          isEn ? 'text-paper' : 'text-forest',
         ].join(' ')}
       >
         EN
