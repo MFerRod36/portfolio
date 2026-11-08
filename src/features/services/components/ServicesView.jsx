@@ -44,7 +44,7 @@ function ServicesView({ badge, headingNeutral, slideLabel, services, activeIndex
                 {service.tags.map((tag) => (
                   <li
                     key={tag}
-                    className="px-3 py-1 rounded-full bg-paper border border-forest/20 text-xs font-sans text-forest tracking-wide"
+                    className="px-3 py-1 rounded-full bg-accent text-xs font-sans font-medium text-forest tracking-wide"
                   >
                     {tag}
                   </li>
