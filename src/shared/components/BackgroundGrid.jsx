@@ -5,7 +5,7 @@ export function BackgroundGrid() {
       width="100%"
       height="100%"
       aria-hidden="true"
-      className="absolute inset-0 pointer-events-none"
+      className="absolute inset-0 pointer-events-none text-forest"
     >
       <defs>
         <pattern
@@ -19,8 +19,8 @@ export function BackgroundGrid() {
           <path
             d="M 40 0 L 0 0 0 40"
             fill="none"
-            stroke="var(--color-text)"
-            strokeOpacity="0.04"
+            stroke="currentColor"
+            strokeOpacity="0.06"
             strokeWidth="0.5"
           />
         </pattern>

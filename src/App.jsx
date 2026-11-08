@@ -12,7 +12,7 @@ function App() {
     <LangProvider>
       <Navbar />
       <main id="main-content">
-        <div className="relative bg-page">
+        <div className="relative">
           <BackgroundGrid />
           <HeroSection />
           <AboutSection />

@@ -1,9 +1,9 @@
 import { CtaButton } from '../../../shared/components/CtaButton'
 
 const inputClasses =
-  'w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-text placeholder:text-text/30 focus:outline-none focus:border-accent/50 transition-colors duration-200'
+  'w-full bg-paper border border-forest/30 rounded-lg px-4 py-3 text-sm text-forest placeholder:text-forest/60 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest transition-colors duration-200'
 
-const labelClasses = 'block text-xs uppercase tracking-wide text-text/50 mb-1.5'
+const labelClasses = 'block text-xs uppercase tracking-wide text-forest/75 mb-1.5'
 
 function ContactView({
   content,
@@ -29,15 +29,15 @@ function ContactView({
       <div className="max-w-7xl mx-auto flex flex-col gap-12">
 
         <div className="flex flex-col gap-4">
-          <span className="font-display text-xs uppercase tracking-wide-display text-accent">
+          <span className="font-display text-xs uppercase tracking-wide-display text-accent-strong">
             {content.badge}
           </span>
-          <h2 className="font-display font-bold leading-none tracking-tight text-5xl md:text-6xl xl:text-7xl text-text">
+          <h2 className="font-display font-bold leading-none tracking-tight text-5xl md:text-6xl xl:text-7xl text-forest">
             {content.heading}
           </h2>
         </div>
 
-        <div className="max-w-2xl mr-auto w-full bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm p-8 md:p-10">
+        <div className="max-w-2xl mr-auto w-full bg-forest/5 border border-forest/15 rounded-2xl p-8 md:p-10">
           {submitted ? (
             <div className="flex flex-col items-center text-center gap-4 py-8">
               <svg
@@ -49,15 +49,15 @@ function ContactView({
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 aria-hidden="true"
-                className="w-16 h-16 text-accent"
+                className="w-16 h-16 text-accent-strong"
               >
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
                 <polyline points="22 4 12 14.01 9 11.01" />
               </svg>
-              <h3 className="font-display font-bold text-2xl text-text">
+              <h3 className="font-display font-bold text-2xl text-forest">
                 {content.successTitle}
               </h3>
-              <p className="font-sans text-sm text-text/70">
+              <p className="font-sans text-sm text-forest/75">
                 {content.successBody}
               </p>
             </div>
@@ -67,7 +67,7 @@ function ContactView({
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="contact-nombre" className={labelClasses}>
-                    {content.fields.nombre} <span className="text-accent">*</span>
+                    {content.fields.nombre} <span className="text-accent-strong">*</span>
                   </label>
                   <input
                     id="contact-nombre"
@@ -82,7 +82,7 @@ function ContactView({
 
                 <div>
                   <label htmlFor="contact-apellido" className={labelClasses}>
-                    {content.fields.apellido} <span className="text-accent">*</span>
+                    {content.fields.apellido} <span className="text-accent-strong">*</span>
                   </label>
                   <input
                     id="contact-apellido"
@@ -99,7 +99,7 @@ function ContactView({
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="contact-whatsapp" className={labelClasses}>
-                    {content.fields.whatsapp} <span className="text-accent">*</span>
+                    {content.fields.whatsapp} <span className="text-accent-strong">*</span>
                   </label>
                   <input
                     id="contact-whatsapp"
@@ -114,7 +114,7 @@ function ContactView({
 
                 <div>
                   <label htmlFor="contact-mail" className={labelClasses}>
-                    {content.fields.mail} <span className="text-text/30 normal-case tracking-normal">({content.optional})</span>
+                    {content.fields.mail} <span className="text-forest/75 normal-case tracking-normal">({content.optional})</span>
                   </label>
                   <input
                     id="contact-mail"
@@ -129,8 +129,8 @@ function ContactView({
 
               <div>
                 <span className={labelClasses} id="servicios-label">
-                  {content.fields.servicios} <span className="text-accent" aria-label={content.required}>*</span>
-                  <span className="block text-text/40 normal-case tracking-normal font-sans mt-0.5">{content.selectOne}</span>
+                  {content.fields.servicios} <span className="text-accent-strong" aria-label={content.required}>*</span>
+                  <span className="block text-forest/75 normal-case tracking-normal font-sans mt-0.5">{content.selectOne}</span>
                 </span>
                 <div className="flex flex-wrap gap-2 mt-1.5" role="group" aria-labelledby="servicios-label">
                   {content.services.map((service) => {
@@ -143,8 +143,8 @@ function ContactView({
                         aria-pressed={active}
                         className={
                           active
-                            ? 'bg-accent/15 border border-accent/40 text-accent rounded-full px-4 py-1.5 text-xs font-display cursor-pointer transition-all duration-200'
-                            : 'bg-white/5 border border-white/10 text-text/60 rounded-full px-4 py-1.5 text-xs font-display cursor-pointer transition-all duration-200 hover:bg-white/10'
+                            ? 'bg-accent border border-accent text-forest rounded-full px-4 py-1.5 text-xs font-display cursor-pointer transition-all duration-200'
+                            : 'bg-paper border border-forest/30 text-forest/75 rounded-full px-4 py-1.5 text-xs font-display cursor-pointer transition-all duration-200 hover:bg-forest/5'
                         }
                       >
                         {service}
@@ -198,7 +198,7 @@ function ContactView({
               </div>
 
               {error && (
-                <p className="font-sans text-sm text-red-400 text-center mt-2">
+                <p className="font-sans text-sm text-danger text-center mt-2">
                   {content.errorMessage}
                 </p>
               )}

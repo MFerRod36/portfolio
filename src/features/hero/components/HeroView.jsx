@@ -10,18 +10,18 @@ function HeroView({ badge, headingLines, subtitle, cta: { href, label } }) {
       <SocialIcons />
 
       <div className="relative z-10 flex flex-col items-center text-center px-6 md:px-8 gap-6">
-        <p className="text-xs uppercase tracking-wide-display font-medium text-accent font-display">
+        <p className="text-xs uppercase tracking-wide-display font-medium text-accent-strong font-display">
           {badge}
         </p>
 
-        <h1 className="leading-none tracking-tight text-5xl md:text-7xl xl:text-8xl text-text">
+        <h1 className="leading-none tracking-tight text-5xl md:text-7xl xl:text-8xl text-forest">
           {headingLines.map(({ text, style }) => (
             <span
               key={text}
               className={[
                 'block',
                 style === 'mencken'
-                  ? 'font-mencken italic font-normal text-accent'
+                  ? 'font-mencken italic font-normal text-accent-strong'
                   : 'font-display font-bold',
               ].join(' ')}
             >
@@ -31,7 +31,7 @@ function HeroView({ badge, headingLines, subtitle, cta: { href, label } }) {
         </h1>
 
         <div className="flex flex-col items-center gap-10 mt-6">
-          <p className="max-w-2xl text-sm md:text-base text-text/70 font-sans">
+          <p className="max-w-2xl text-sm md:text-base text-forest/75 font-sans">
             {subtitle}
           </p>
 

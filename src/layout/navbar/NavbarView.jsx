@@ -22,13 +22,13 @@ export function NavbarView({
         'rounded-2xl border transition-all duration-300',
         'backdrop-blur-2xl',
         scrolled
-          ? 'bg-white/12 border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_8px_32px_rgba(0,0,0,0.28),0_2px_8px_rgba(0,0,0,0.12)]'
-          : 'bg-white/7 border-white/12 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_4px_16px_rgba(0,0,0,0.18)]',
+          ? 'bg-forest/95 border-paper/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_8px_32px_rgba(0,0,0,0.28),0_2px_8px_rgba(0,0,0,0.12)]'
+          : 'bg-forest/85 border-paper/15 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_4px_16px_rgba(0,0,0,0.18)]',
       ].join(' ')}
     >
       <nav className="relative flex items-center gap-2 h-12 px-4">
         {/* Left — logo */}
-        <a href="#home" onClick={(e) => onNavClick(e, '#home')} className="flex items-center pr-3 border-r border-white/12">
+        <a href="#home" onClick={(e) => onNavClick(e, '#home')} className="flex items-center pr-3 border-r border-paper/15">
           <img src="/logo.png" alt="Fernanda Rodriguez" className="h-7 object-contain" />
         </a>
 
@@ -37,7 +37,7 @@ export function NavbarView({
           <span
             ref={bubbleRef}
             aria-hidden="true"
-            className="absolute left-0 top-1/2 h-8 rounded-lg pointer-events-none backdrop-blur-sm bg-white/10 border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_1px_4px_rgba(0,0,0,0.18)] [transition:transform_350ms_var(--ease-spring),width_250ms_ease-out]"
+            className="absolute left-0 top-1/2 h-8 rounded-lg pointer-events-none backdrop-blur-sm bg-paper/10 border border-paper/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_1px_4px_rgba(0,0,0,0.18)] [transition:transform_350ms_var(--ease-spring),width_250ms_ease-out]"
           />
           <ul className="flex items-center gap-1">
           {navItems.map((item, index) => {
@@ -56,8 +56,8 @@ export function NavbarView({
                     'transition-colors duration-200',
                     'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent',
                     isActive
-                      ? 'text-text'
-                      : 'text-text/70 hover:text-text',
+                      ? 'text-paper'
+                      : 'text-paper/70 hover:text-paper',
                   ].join(' ')}
                 >
                   {item.label}
@@ -69,7 +69,7 @@ export function NavbarView({
         </div>
 
         {/* Right — language switch (desktop only) */}
-        <div className="hidden md:flex items-center ml-auto pl-3 border-l border-white/12">
+        <div className="hidden md:flex items-center ml-auto pl-3 border-l border-paper/15">
           <LanguageSwitch lang={lang} onToggle={onToggle} />
         </div>
 
@@ -83,19 +83,19 @@ export function NavbarView({
         >
           <span
             className={[
-              'block h-0.5 w-6 bg-text origin-center transition-transform duration-200',
+              'block h-0.5 w-6 bg-paper origin-center transition-transform duration-200',
               isMenuOpen ? 'rotate-45 translate-y-2' : '',
             ].join(' ')}
           />
           <span
             className={[
-              'block h-0.5 w-6 bg-text origin-center transition-[transform,opacity] duration-200',
+              'block h-0.5 w-6 bg-paper origin-center transition-[transform,opacity] duration-200',
               isMenuOpen ? 'opacity-0 scale-x-0' : '',
             ].join(' ')}
           />
           <span
             className={[
-              'block h-0.5 w-6 bg-text origin-center transition-transform duration-200',
+              'block h-0.5 w-6 bg-paper origin-center transition-transform duration-200',
               isMenuOpen ? '-rotate-45 -translate-y-2' : '',
             ].join(' ')}
           />
@@ -106,11 +106,11 @@ export function NavbarView({
       <div
         className={[
           'md:hidden overflow-hidden transition-all duration-300',
-          'backdrop-blur-xl bg-white/8',
-          isMenuOpen ? 'max-h-96 border-b border-white/8' : 'max-h-0',
+          'bg-paper/5',
+          isMenuOpen ? 'max-h-96 border-b border-paper/15' : 'max-h-0',
         ].join(' ')}
       >
-        <div className="px-6 pt-4 border-b border-white/8 pb-4">
+        <div className="px-6 pt-4 border-b border-paper/15 pb-4">
           <LanguageSwitch lang={lang} onToggle={onToggle} />
         </div>
         <nav aria-label={labels.mobileNav}>
@@ -121,7 +121,7 @@ export function NavbarView({
             return (
               <li
                 key={item.id}
-                className={isLast ? '' : 'border-b border-white/8'}
+                className={isLast ? '' : 'border-b border-paper/15'}
               >
                 <a
                   ref={index === 0 ? firstMobileItemRef : undefined}
@@ -132,7 +132,7 @@ export function NavbarView({
                     'transition-colors duration-200',
                     isActive
                       ? 'text-accent'
-                      : 'text-text/70',
+                      : 'text-paper/70',
                   ].join(' ')}
                 >
                   {isActive && <span aria-hidden="true">&#9679;</span>}
@@ -143,7 +143,7 @@ export function NavbarView({
           })}
         </ul>
         </nav>
-        <div className="border-t border-white/8 px-6 py-4 flex items-center gap-4">
+        <div className="border-t border-paper/15 px-6 py-4 flex items-center gap-4">
           {socialLinks.map(({ name, href, path }) => (
             <a
               key={name}
@@ -151,7 +151,7 @@ export function NavbarView({
               target="_blank"
               rel="noopener noreferrer"
               aria-label={name}
-              className="text-white/40 hover:text-white/90 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+              className="text-paper/70 hover:text-paper transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="size-4" aria-hidden="true">
                 <path d={path} />

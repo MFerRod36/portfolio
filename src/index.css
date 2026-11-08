@@ -1,14 +1,10 @@
 @import 'tailwindcss';
 @import './styles/tokens.css';
 
-@utility bg-page {
-  background-image: var(--gradient-page);
-}
-
 html,
 body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  background-color: var(--color-paper);
+  color: var(--color-forest);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

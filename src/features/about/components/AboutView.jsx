@@ -4,16 +4,16 @@ function AboutView({ badge, headingNeutral, headingAccent, body }) {
       <div className="max-w-7xl mx-auto flex flex-col gap-12">
 
         <div className="flex flex-col gap-4">
-          <span className="font-display text-xs uppercase tracking-wide-display text-accent">
+          <span className="font-display text-xs uppercase tracking-wide-display text-accent-strong">
             {badge}
           </span>
           <h2 className="font-display font-bold leading-none tracking-tight text-5xl md:text-6xl xl:text-7xl">
-            <span className="text-text">{headingNeutral}</span>
-            <span className="text-accent"> {headingAccent}</span>
+            <span className="text-forest">{headingNeutral}</span>
+            <span className="text-accent-strong"> {headingAccent}</span>
           </h2>
         </div>
 
-        <p className="font-sans text-sm md:text-base leading-relaxed text-text/70 max-w-4xl">
+        <p className="font-sans text-sm md:text-base leading-relaxed text-forest/75 max-w-4xl">
           {body}
         </p>
 

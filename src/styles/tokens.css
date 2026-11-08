@@ -1,14 +1,15 @@
 /* Source: contexto-marca/marca.md */
 @theme {
-  --color-bg: #2a3336;
+  --color-paper: #f4ead5;
+  --color-forest: #1e3b2f;
   --color-accent: #ff8053;
-  --color-text: #f5f5f7;
+  --color-accent-strong: #b23f18;
+  --color-danger: #b42318;
 
   --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
   --font-mencken: 'mencken-text', serif;
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
 
-  --gradient-page: linear-gradient(135deg, #0d1618 0%, #2a3336 50%, #0d1618 100%);
   --tracking-wide-display: 0.2em;
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
