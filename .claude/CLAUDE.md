@@ -2,7 +2,13 @@
 
 ## Brand Manual
 
-Antes de diseñar o proponer cualquier elemento visual, leer @BRAND.md
+Antes de diseñar o proponer cualquier elemento visual, leer @contexto-marca/marca.md
+
+## Contexto del proyecto
+
+- `contexto-marca/marca.md`: manual de marca (paleta, tipografía, estilo, componentes)
+- `contexto-marca/arquitectura.md`: secciones, navegación y estructura de carpetas
+- `contexto-marca/list-optimization.md`: checklist de calidad; revisarla antes de cada deploy
 
 ## Proyecto
 
