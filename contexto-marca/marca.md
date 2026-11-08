@@ -39,7 +39,7 @@ Los tokens viven en `src/styles/tokens.css`. Cada color nuevo se agrega ahí y e
 
 - Nunca reemplazar estos colores por utilidades genéricas de Tailwind (zinc, amber, slate, red, white, etc.)
 - Usar siempre las utilities de los tokens (`bg-forest`), nunca hex sueltos ni `bg-[var(--color-x)]`
-- Sobre crema, el naranja `accent` solo va como relleno (botones) o decoración; el texto naranja usa `accent-strong`
+- Sobre crema, el naranja `accent` solo va como relleno (botones) o decoración; el texto naranja usa `accent-strong`. Única excepción, decidida por la marca: la línea en Mencken del H1 del Hero usa `accent` (2.07:1, no cumple WCAG)
 - Texto secundario con opacidad: mínimo `forest/75` sobre crema y `paper/70` sobre verde
 - Fondos planos, sin degradés
 - Anillo de foco: `outline-forest` sobre crema, `outline-accent` sobre verde

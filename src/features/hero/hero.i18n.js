@@ -5,7 +5,7 @@ export const heroContent = {
     headingLines: ['Web Designer', '& Developer.'],
     subtitle:
       '¡Hola! Soy Fernanda Rodríguez. Diseño productos digitales enfocados en la experiencia de usuario y arquitectura de interfaces. Desarrollo soluciones modulares y escalables. Además, construyo identidades visuales y gestiono estrategias de crecimiento en redes sociales.',
-    cta: 'Trabajemos Juntos',
+    cta: 'Escribime',
   },
   en: {
     badge: 'Portfolio / 2026',
