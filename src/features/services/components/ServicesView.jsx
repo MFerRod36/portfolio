@@ -40,9 +40,16 @@ function ServicesView({ badge, headingNeutral, slideLabel, services, activeIndex
                 {service.description}
               </p>
 
-              <p className="mt-8 text-xs font-sans text-forest/75 tracking-wide">
-                {service.tags.join(' · ')}
-              </p>
+              <ul className="mt-8 flex flex-wrap gap-2">
+                {service.tags.map((tag) => (
+                  <li
+                    key={tag}
+                    className="px-3 py-1 rounded-full bg-paper border border-forest/20 text-xs font-sans text-forest tracking-wide"
+                  >
+                    {tag}
+                  </li>
+                ))}
+              </ul>
             </li>
           ))}
         </ul>
