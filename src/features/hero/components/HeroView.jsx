@@ -21,7 +21,7 @@ function HeroView({ badge, headingLines, subtitle, cta: { href, label } }) {
               className={[
                 'block',
                 style === 'mencken'
-                  ? 'font-mencken italic font-bold text-accent'
+                  ? '-mt-[0.15em] font-mencken italic font-bold text-accent'
                   : 'font-display font-bold',
               ].join(' ')}
             >
