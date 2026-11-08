@@ -25,7 +25,7 @@ function ServicesView({ badge, headingNeutral, slideLabel, services, activeIndex
             >
               <span
                 aria-hidden="true"
-                className="absolute top-6 right-8 font-display font-bold text-5xl text-forest/10 select-none pointer-events-none"
+                className="absolute top-6 right-8 font-display font-bold text-5xl text-accent/40 select-none pointer-events-none"
               >
                 {service.number}
               </span>
