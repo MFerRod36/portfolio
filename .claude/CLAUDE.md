@@ -12,8 +12,11 @@ Servicios: Desarrollo Web + Marketing Digital/CM.
 ## Stack
 
 - Frontend: React + Vite + JavaScript + Tailwind 4
-- Backend: Node.js + Express (solo formulario de contacto)
-- Deploy: Vercel (frontend) + Render (backend)
+- Backend: función serverless de Vercel en `api/contact.js` (solo formulario de contacto).
+  Valida y envía el mail con **Resend**. Variables de entorno: `RESEND_API_KEY`,
+  `CONTACT_FROM`, `CONTACT_EMAIL`, `ALLOWED_ORIGIN` (opcional, CORS)
+- Deploy: Vercel (frontend + función serverless). Probar local con `vercel dev`
+- Seguridad: headers y CSP en `vercel.json`
 
 ## Arquitectura: Scope Rule (Gentleman)
 
@@ -22,12 +25,12 @@ Servicios: Desarrollo Web + Marketing Digital/CM.
 
 ## Subagentes disponibles
 
-| Acción                 | Agente                  | Modelo |
-| ---------------------- | ----------------------- | ------ |
-| Diseñar sección        | ux-landing-designer     | Sonnet |
-| Crear componente React | react-component-builder | Opus   |
-| Revisar accesibilidad  | accessibility-auditor   | Haiku  |
-| Hacer commit           | git-workflow-manager    | Haiku  |
+| Acción                 | Agente                      | Modelo |
+| ---------------------- | --------------------------- | ------ |
+| Diseñar sección        | ux-landing-designer         | Sonnet |
+| Crear componente React | react-component-architect   | Opus   |
+| Revisar accesibilidad  | wcag-accessibility-reviewer | Haiku  |
+| Hacer commit           | commit-pr-specialist        | Haiku  |
 
 ## Skills activas
 
@@ -65,14 +68,14 @@ Use ux-landing-designer to propose visual design
 
 ### Fase 2 — Implementación
 
-Use react-component-builder to implement the approved design
+Use react-component-architect to implement the approved design
 → Read ~/.claude/skills/react-19/SKILL.md
 → Read ~/.claude/skills/tailwind-4/SKILL.md
 
 ### Fase 3 — Accesibilidad
 
-Use accessibility-auditor to check WCAG compliance
-→ Si hay problemas: use react-component-builder to fix them
+Use wcag-accessibility-reviewer to check WCAG compliance
+→ Si hay problemas: use react-component-architect to fix them
 
 ### Fase 4 — Commit
 
