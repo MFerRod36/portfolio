@@ -1,4 +1,4 @@
-import { useLang } from '../../shared/context/LangContext'
+import { useLang } from '../../shared/context/useLang'
 import { servicesContent } from './services.i18n'
 import { useCarousel } from './useCarousel'
 import ServicesView from './components/ServicesView'

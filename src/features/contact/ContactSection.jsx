@@ -1,4 +1,4 @@
-import { useLang } from '../../shared/context/LangContext'
+import { useLang } from '../../shared/context/useLang'
 import { contactContent } from './contact.i18n'
 import { useContact } from './useContact'
 import ContactView from './components/ContactView'

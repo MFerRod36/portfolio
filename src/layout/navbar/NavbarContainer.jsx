@@ -1,4 +1,4 @@
-import { useLang } from '../../shared/context/LangContext';
+import { useLang } from '../../shared/context/useLang';
 import { useNavbar } from './useNavbar';
 import { NavbarView } from './Navbar';
 import { NAV_ITEMS } from '../../shared/config/nav';

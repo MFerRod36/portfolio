@@ -1,6 +1,5 @@
-import { createContext, useContext, useEffect, useState } from 'react';
-
-const LangContext = createContext(null);
+import { useEffect, useState } from 'react';
+import { LangContext } from './useLang';
 
 export function LangProvider({ children }) {
   const [lang, setLang] = useState('es');
@@ -12,9 +11,3 @@ export function LangProvider({ children }) {
 
   return <LangContext.Provider value={{ lang, toggleLang }}>{children}</LangContext.Provider>;
 }
-
-export const useLang = () => {
-  const ctx = useContext(LangContext);
-  if (!ctx) throw new Error('useLang must be used within LangProvider');
-  return ctx;
-};

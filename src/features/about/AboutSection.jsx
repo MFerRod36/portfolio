@@ -1,4 +1,4 @@
-import { useLang } from '../../shared/context/LangContext'
+import { useLang } from '../../shared/context/useLang'
 import { aboutContent } from './about.i18n'
 import AboutView from './components/AboutView'
 

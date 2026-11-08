@@ -1,4 +1,4 @@
-import { useLang } from '../../shared/context/LangContext'
+import { useLang } from '../../shared/context/useLang'
 import { heroContent } from './hero.i18n'
 import HeroView from './components/HeroView'
 
