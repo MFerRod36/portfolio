@@ -13,7 +13,7 @@ export function LanguageSwitch({ lang, onToggle }) {
       {/* Pearl — rectangular, covers exactly half the pill */}
       <span
         aria-hidden="true"
-        className={`absolute top-1 left-1 w-[calc(50%-8px)] h-[calc(100%-8px)] rounded-full bg-forest border border-forest shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_1px_3px_rgba(0,0,0,0.2)] [transition:transform_280ms_var(--ease-spring)] ${isEn ? 'translate-x-8' : 'translate-x-0'}`}
+        className={`absolute top-0.5 left-0.5 w-[calc(50%-4px)] h-[calc(100%-4px)] rounded-full bg-forest border border-forest shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_1px_3px_rgba(0,0,0,0.2)] [transition:transform_280ms_var(--ease-spring)] ${isEn ? 'translate-x-[calc(100%+4px)]' : 'translate-x-0'}`}
       />
 
       {/* Labels — flex-1 centers each one in its own half */}
