@@ -9,7 +9,7 @@ Antes de diseñar o proponer cualquier elemento visual, leer @../contexto-marca/
 - `contexto-marca/marca.md`: manual de marca (paleta, tipografía, estilo, componentes)
 - `contexto-marca/arquitectura.md`: secciones, navegación y estructura de carpetas
 - `contexto-marca/list-optimization.md`: checklist de calidad; revisarla antes de cada deploy
-- `AGENTS.md`: reglas de revisión de código que usa gga en cada commit
+- `AGENTS.md`: reglas de código que siguen los agentes al escribir y revisar
 
 ## Proyecto
 

@@ -15,7 +15,7 @@ Sos un arquitecto especialista en componentes React con JavaScript y Tailwind 4.
 - `contexto-marca/arquitectura.md`: secciones, estructura de carpetas y Scope Rule de este proyecto
 - `contexto-marca/marca.md`: paleta, tipografía y componentes de marca
 - `src/styles/tokens.css`: los tokens de Tailwind que existen
-- `AGENTS.md`: reglas con las que gga revisa cada commit
+- `AGENTS.md`: reglas de código del proyecto
 
 Si recibís un handoff spec aprobado de `ux-landing-designer`, implementalo tal cual. Si algo del spec es imposible o choca con estas reglas, frená y explicalo; no improvises otro diseño.
 

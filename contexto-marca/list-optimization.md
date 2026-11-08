@@ -8,7 +8,7 @@ Estado verificado el 2026-11-08.
 | Regla | Cómo se cumple |
 |---|---|
 | Sin claves hardcodeadas ni secretos filtrados | La clave de Resend vive en las variables de entorno de Vercel y solo la lee `api/contact.js` en el servidor. `.env.local` está en `.gitignore`; las variables están documentadas en `.env.example`. |
-| Sin `console.log` en producción | No hay ninguno en `src/`. La regla también está en `AGENTS.md`, así que gga lo revisa en cada commit. |
+| Sin `console.log` en producción | No hay ninguno en `src/` ni en `api/`. La regla está en `AGENTS.md`. |
 | Sin sourcemaps expuestos | Vite no genera `.map` en el build de producción (se verifica en `dist/`). |
 | Sin dependencias sin uso | Se revisan los imports antes de agregar o actualizar paquetes. |
 | Sin vulnerabilidades conocidas | `npm audit` en 0 antes de cada deploy. |
@@ -33,7 +33,7 @@ Estado verificado el 2026-11-08.
 | Link para saltar al contenido | "Skip to main content" en `index.html`. |
 | Cabeceras de seguridad y CSP | En `vercel.json`. Si se agrega una fuente o script externo, hay que sumarlo a la CSP. |
 | HTTPS | Vercel lo fuerza automáticamente. |
-| Lint sin errores | `npm run lint` en 0 antes de cada deploy. **Pendiente:** hoy hay 5 errores. |
+| Lint sin errores | `npm run build` corre `eslint .` antes de compilar: si hay errores, el deploy falla. |
 
 ## No aplica
 

@@ -39,7 +39,7 @@ Sitio personal que reúne mis servicios de desarrollo web y estrategia digital. 
 | `npm run dev` | Servidor de desarrollo (solo el front; el formulario no envía) |
 | `vercel dev` | Front + función `api/contact.js`, para probar el formulario en local |
 | `npm run lint` | ESLint sobre todo el proyecto |
-| `npm run build` | Build de producción en `dist/` |
+| `npm run build` | Corre el lint y, si no hay errores, genera el build de producción en `dist/` |
 | `npm run preview` | Sirve `dist/` para revisarlo antes de publicar |
 
 ### Variables de entorno
@@ -61,4 +61,4 @@ En producción se cargan en Vercel → Project → Settings → Environment Vari
 | `contexto-marca/marca.md` | Manual de marca: paleta, tipografía, estilo y componentes |
 | `contexto-marca/arquitectura.md` | Secciones, idiomas y estructura de carpetas |
 | `contexto-marca/list-optimization.md` | Checklist de calidad; se revisa antes de cada deploy |
-| `AGENTS.md` | Reglas de revisión de código que usa gga en cada commit |
+| `AGENTS.md` | Reglas de código que siguen los agentes al escribir y revisar |
