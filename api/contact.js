@@ -1,7 +1,5 @@
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const ALLOWED_SERVICES = new Set([
   'Desarrollo Web',
   'Marketing Digital',
@@ -13,6 +11,12 @@ const ALLOWED_SERVICES = new Set([
 ]);
 
 const MAX_LENGTHS = { nombre: 100, apellido: 100, whatsapp: 30, mail: 254, mensaje: 2000 };
+const REQUIRED_FIELDS = ['nombre', 'apellido', 'whatsapp'];
+const OPTIONAL_FIELDS = ['mail', 'mensaje'];
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+const isString = (value) => typeof value === 'string';
+const singleLine = (str) => str.replace(/[\r\n]+/g, ' ');
 
 function escapeHtml(str) {
   return String(str)
@@ -35,17 +39,45 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(204).end();
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  const { nombre, apellido, whatsapp, mail, mensaje, selectedServices } = req.body;
+  const { RESEND_API_KEY, CONTACT_FROM, CONTACT_EMAIL } = process.env;
+  if (!RESEND_API_KEY || !CONTACT_FROM || !CONTACT_EMAIL) {
+    return res.status(500).json({ error: 'Servicio de contacto no configurado' });
+  }
 
-  if (!nombre || !apellido || !whatsapp || !selectedServices?.length) {
+  const body = req.body;
+  if (!body || typeof body !== 'object') {
+    return res.status(400).json({ error: 'Solicitud inválida' });
+  }
+
+  const hasInvalidType =
+    REQUIRED_FIELDS.some((field) => !isString(body[field])) ||
+    OPTIONAL_FIELDS.some((field) => body[field] != null && !isString(body[field])) ||
+    !Array.isArray(body.selectedServices) ||
+    !body.selectedServices.every(isString);
+  if (hasInvalidType) {
+    return res.status(400).json({ error: 'Solicitud inválida' });
+  }
+
+  const nombre = body.nombre.trim();
+  const apellido = body.apellido.trim();
+  const whatsapp = body.whatsapp.trim();
+  const mail = body.mail?.trim() || null;
+  const mensaje = body.mensaje?.trim() || null;
+  const { selectedServices } = body;
+
+  if (!nombre || !apellido || !whatsapp || !selectedServices.length) {
     return res.status(400).json({ error: 'Faltan campos requeridos' });
   }
 
+  const values = { nombre, apellido, whatsapp, mail, mensaje };
   for (const [field, max] of Object.entries(MAX_LENGTHS)) {
-    const value = req.body[field];
-    if (value && String(value).length > max) {
+    if (values[field] && values[field].length > max) {
       return res.status(400).json({ error: `Campo ${field} excede el largo permitido` });
     }
+  }
+
+  if (mail && !EMAIL_PATTERN.test(mail)) {
+    return res.status(400).json({ error: 'Mail no válido' });
   }
 
   const invalidService = selectedServices.find((s) => !ALLOWED_SERVICES.has(s));
@@ -63,10 +95,13 @@ export default async function handler(req, res) {
   };
 
   try {
-    await resend.emails.send({
-      from: process.env.CONTACT_FROM,
-      to: process.env.CONTACT_EMAIL,
-      subject: `Nuevo contacto: ${safe.nombre} ${safe.apellido}`,
+    const resend = new Resend(RESEND_API_KEY);
+    // Resend returns { data, error } instead of throwing on API errors
+    const { error } = await resend.emails.send({
+      from: CONTACT_FROM,
+      to: CONTACT_EMAIL,
+      ...(mail && { replyTo: mail }),
+      subject: singleLine(`Nuevo contacto: ${nombre} ${apellido}`),
       html: `
         <h2>Nuevo mensaje desde el portfolio</h2>
         <p><strong>Nombre:</strong> ${safe.nombre} ${safe.apellido}</p>
@@ -76,6 +111,10 @@ export default async function handler(req, res) {
         ${safe.mensaje ? `<p><strong>Mensaje:</strong> ${safe.mensaje}</p>` : ''}
       `,
     });
+
+    if (error) {
+      return res.status(502).json({ error: 'Error al enviar el mensaje' });
+    }
 
     return res.status(200).json({ ok: true });
   } catch {
