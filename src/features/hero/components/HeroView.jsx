@@ -7,7 +7,10 @@ function HeroView({ badge, headingLines, subtitle, cta: { href, label }, portrai
       id="home"
       className="relative w-full min-h-svh flex items-center overflow-hidden px-6 pt-28 pb-16 md:px-8"
     >
-      <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 items-center gap-12 md:grid-cols-[11fr_9fr] md:gap-16">
+      <SocialIcons />
+
+      {/* md:pr-16 keeps the portrait clear of the floating social column */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 items-center gap-12 md:grid-cols-[11fr_9fr] md:gap-16 md:pr-16">
         <div className="flex flex-col items-start gap-6 text-left">
           <p className="px-4 py-1.5 rounded-full bg-forest text-xs uppercase tracking-wide-display font-medium text-paper font-display">
             {badge}
@@ -33,9 +36,8 @@ function HeroView({ badge, headingLines, subtitle, cta: { href, label }, portrai
             {subtitle}
           </p>
 
-          <div className="flex flex-col items-start gap-8 mt-4">
+          <div className="mt-4">
             <CtaButton href={href}>{label}</CtaButton>
-            <SocialIcons />
           </div>
         </div>
 
