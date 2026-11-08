@@ -9,21 +9,21 @@ export const servicesContent = {
         title: 'Diseño UX/UI',
         description:
           'Interfaces de alta fidelidad que respetan los sistemas de diseño. Wireframes, prototipos y handoff técnico sin fricción.',
-        tags: ['Figma', 'Wireframing', 'Design Systems', 'Prototipado'],
+        tags: ['Figma', 'Sistemas de diseño', 'Prototipos'],
       },
       {
         number: '02',
         title: 'Desarrollo Front-End',
         description:
           'React, Vite, Tailwind. Componentes con performance real: animaciones, accesibilidad y código que escala.',
-        tags: ['React', 'TypeScript', 'Tailwind', 'Vite'],
+        tags: ['React', 'Tailwind CSS', 'Accesibilidad'],
       },
       {
         number: '03',
         title: 'CM & Identidad',
         description:
           'Estrategia de contenido y presencia digital con sustento. Identidad visual, copy y comunidad alineados al negocio.',
-        tags: ['Instagram', 'Branding', 'Copywriting', 'Estrategia'],
+        tags: ['Identidad visual', 'Estrategia de contenido', 'Copywriting'],
       },
     ],
   },
@@ -37,21 +37,21 @@ export const servicesContent = {
         title: 'UX/UI Design',
         description:
           'High-fidelity interfaces that respect design systems. Wireframes, prototypes, and frictionless technical handoff.',
-        tags: ['Figma', 'Wireframing', 'Design Systems', 'Prototyping'],
+        tags: ['Figma', 'Design systems', 'Prototypes'],
       },
       {
         number: '02',
         title: 'Front-End Development',
         description:
           'React, Vite, Tailwind. Components with real performance: animations, accessibility, and code that scales.',
-        tags: ['React', 'TypeScript', 'Tailwind', 'Vite'],
+        tags: ['React', 'Tailwind CSS', 'Accessibility'],
       },
       {
         number: '03',
         title: 'CM & Brand Identity',
         description:
           'Content strategy and digital presence with substance. Visual identity, copy, and community aligned to the business.',
-        tags: ['Instagram', 'Branding', 'Copywriting', 'Strategy'],
+        tags: ['Visual identity', 'Content strategy', 'Copywriting'],
       },
     ],
   },
