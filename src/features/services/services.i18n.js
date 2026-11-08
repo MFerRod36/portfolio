@@ -9,21 +9,21 @@ export const servicesContent = {
         title: 'Diseño UX/UI',
         description:
           'Interfaces de alta fidelidad que respetan los sistemas de diseño. Wireframes, prototipos y handoff técnico sin fricción.',
-        tags: ['Figma', 'Sistemas de diseño', 'Prototipos'],
+        tags: ['Figma', 'Wireframes', 'Prototipos'],
       },
       {
         number: '02',
         title: 'Desarrollo Front-End',
         description:
           'React, Vite, Tailwind. Componentes con performance real: animaciones, accesibilidad y código que escala.',
-        tags: ['React', 'Tailwind CSS', 'Accesibilidad'],
+        tags: ['React', 'Tailwind', 'Accesibilidad'],
       },
       {
         number: '03',
         title: 'CM & Identidad',
         description:
           'Estrategia de contenido y presencia digital con sustento. Identidad visual, copy y comunidad alineados al negocio.',
-        tags: ['Identidad visual', 'Estrategia de contenido', 'Copywriting'],
+        tags: ['Branding', 'Contenido', 'Copywriting'],
       },
     ],
   },
@@ -37,21 +37,21 @@ export const servicesContent = {
         title: 'UX/UI Design',
         description:
           'High-fidelity interfaces that respect design systems. Wireframes, prototypes, and frictionless technical handoff.',
-        tags: ['Figma', 'Design systems', 'Prototypes'],
+        tags: ['Figma', 'Wireframes', 'Prototypes'],
       },
       {
         number: '02',
         title: 'Front-End Development',
         description:
           'React, Vite, Tailwind. Components with real performance: animations, accessibility, and code that scales.',
-        tags: ['React', 'Tailwind CSS', 'Accessibility'],
+        tags: ['React', 'Tailwind', 'Accessibility'],
       },
       {
         number: '03',
         title: 'CM & Brand Identity',
         description:
           'Content strategy and digital presence with substance. Visual identity, copy, and community aligned to the business.',
-        tags: ['Visual identity', 'Content strategy', 'Copywriting'],
+        tags: ['Branding', 'Content', 'Copywriting'],
       },
     ],
   },
