@@ -1,3 +1,4 @@
+import { BackgroundGrid } from '../../../shared/components/BackgroundGrid'
 import { CtaButton } from '../../../shared/components/CtaButton'
 
 const inputClasses =
@@ -26,7 +27,8 @@ function ContactView({
 }) {
   return (
     <section id="contact" className="relative bg-forest text-paper py-24 px-6 md:px-8">
-      <div className="max-w-7xl mx-auto flex flex-col gap-12">
+      <BackgroundGrid tone="dark" />
+      <div className="relative max-w-7xl mx-auto flex flex-col gap-12">
 
         <div className="flex flex-col gap-4">
           <span className="font-display text-xs uppercase tracking-wide-display text-accent">

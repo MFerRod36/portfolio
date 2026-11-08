@@ -1,7 +1,10 @@
+import { BackgroundGrid } from '../../../shared/components/BackgroundGrid'
+
 function AboutView({ badge, headingNeutral, headingAccent, body }) {
   return (
     <section id="about" className="relative bg-forest text-paper py-24 px-6 md:px-8">
-      <div className="max-w-7xl mx-auto flex flex-col gap-12">
+      <BackgroundGrid tone="dark" />
+      <div className="relative max-w-7xl mx-auto flex flex-col gap-12">
 
         <div className="flex flex-col gap-4">
           <span className="font-display text-xs uppercase tracking-wide-display text-accent">

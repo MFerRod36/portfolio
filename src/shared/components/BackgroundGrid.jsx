@@ -1,15 +1,26 @@
-export function BackgroundGrid() {
+import { useId } from 'react'
+
+const toneClasses = {
+  light: 'text-forest',
+  dark: 'text-paper',
+}
+
+// tone="light" for paper backgrounds, tone="dark" for forest backgrounds.
+// Each instance needs its own pattern id so different tones don't collide.
+export function BackgroundGrid({ tone = 'light' }) {
+  const patternId = useId()
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="100%"
       height="100%"
       aria-hidden="true"
-      className="absolute inset-0 pointer-events-none text-forest"
+      className={`absolute inset-0 pointer-events-none ${toneClasses[tone]}`}
     >
       <defs>
         <pattern
-          id="bg-grid"
+          id={patternId}
           x="0"
           y="0"
           width="40"
@@ -25,7 +36,7 @@ export function BackgroundGrid() {
           />
         </pattern>
       </defs>
-      <rect width="100%" height="100%" fill="url(#bg-grid)" />
+      <rect width="100%" height="100%" fill={`url(#${patternId})`} />
     </svg>
   )
 }
