@@ -38,8 +38,10 @@ function HeroView({ badge, headingLines, subtitle, cta: { href, label }, portrai
           </div>
         </div>
 
-        {/* Portrait circle and social column share a bottom edge */}
-        <div className="flex items-end justify-center gap-8 md:justify-end">
+        {/* Portrait circle and social column share a bottom edge.
+            On mobile it goes first; the top margin leaves room for the head,
+            which breaks out ~65% of the circle height above it. */}
+        <div className="order-first mt-28 flex items-end justify-center gap-8 md:order-none md:mt-0 md:justify-end">
           {/* Forest circle behind the portrait. The clip box is taller than the circle
               and its bottom is rounded like the circle, so the head breaks out on top
               while the bottom of the illustration follows the circle's curve. */}
