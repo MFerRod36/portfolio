@@ -51,7 +51,7 @@ function HeroView({ badge, headingLines, subtitle, cta: { href, label }, portrai
                 width="1200"
                 height="1200"
                 fetchPriority="high"
-                className="absolute bottom-0 right-0 w-[115%] max-w-none sticker-outline md:w-[140%]"
+                className="absolute bottom-0 right-0 w-[130%] max-w-none sticker-outline md:w-[160%]"
               />
             )}
           </div>
