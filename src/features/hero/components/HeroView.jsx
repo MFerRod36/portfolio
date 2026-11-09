@@ -47,6 +47,9 @@ function HeroView({ badge, headingLines, subtitle, cta: { href, label }, portrai
                 <img
                   src={portrait.src}
                   alt={portrait.alt}
+                  width="1200"
+                  height="1200"
+                  fetchPriority="high"
                   className="size-full object-cover"
                 />
               )}

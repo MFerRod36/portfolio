@@ -6,6 +6,7 @@ export const heroContent = {
     subtitle:
       '¡Hola! Soy Fernanda Rodríguez. Diseño productos digitales enfocados en la experiencia de usuario y arquitectura de interfaces. Desarrollo soluciones modulares y escalables. Además, construyo identidades visuales y gestiono estrategias de crecimiento en redes sociales.',
     cta: 'Escribime',
+    portraitAlt: 'Ilustración de Fernanda Rodríguez',
   },
   en: {
     badge: 'Portfolio / 2026',
@@ -13,5 +14,6 @@ export const heroContent = {
     subtitle:
       "Hi! I'm Fernanda Rodríguez. I design digital products focused on user experience and interface architecture. I develop modular and scalable solutions. I also build visual identities and manage social media growth strategies.",
     cta: "Let's Work Together",
+    portraitAlt: 'Illustration of Fernanda Rodríguez',
   },
 };

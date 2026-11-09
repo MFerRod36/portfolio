@@ -14,8 +14,7 @@ function HeroSection() {
     ],
     subtitle: content.subtitle,
     cta: { label: content.cta, href: '#contact' },
-    // Set src to the photo path in public/ (e.g. '/fernanda.webp') once it exists
-    portrait: { src: '', alt: 'Fernanda Rodríguez' },
+    portrait: { src: '/hero-portrait.webp', alt: content.portraitAlt },
   }
 
   return <HeroView {...viewModel} />
