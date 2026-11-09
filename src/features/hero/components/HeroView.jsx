@@ -40,20 +40,20 @@ function HeroView({ badge, headingLines, subtitle, cta: { href, label }, portrai
 
         {/* Portrait arch and social column share a bottom edge */}
         <div className="flex items-end justify-center gap-8 md:justify-end">
-          {/* Arch frame for the portrait; stays an empty forest shape until a photo is set */}
-          <div className="w-full max-w-xs md:max-w-sm">
-            <div className="aspect-4/5 rounded-t-full bg-forest overflow-hidden">
-              {portrait.src && (
-                <img
-                  src={portrait.src}
-                  alt={portrait.alt}
-                  width="1200"
-                  height="1200"
-                  fetchPriority="high"
-                  className="size-full object-cover sticker-outline"
-                />
-              )}
-            </div>
+          {/* Forest arch behind the portrait; on md+ the portrait is wider than the
+              arch and anchored bottom-right, so its left side breaks out of the shape */}
+          <div className="relative w-full max-w-xs aspect-4/5 md:max-w-sm">
+            <div aria-hidden="true" className="absolute inset-0 rounded-t-full bg-forest" />
+            {portrait.src && (
+              <img
+                src={portrait.src}
+                alt={portrait.alt}
+                width="1200"
+                height="1200"
+                fetchPriority="high"
+                className="absolute bottom-0 right-0 w-full max-w-none sticker-outline md:w-[120%]"
+              />
+            )}
           </div>
 
           <SocialIcons />
