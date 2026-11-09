@@ -1,8 +1,11 @@
 import { BackgroundGrid } from '../../../shared/components/BackgroundGrid'
+import { SectionWave } from '../../../shared/components/SectionWave'
 
 function AboutView({ badge, headingNeutral, headingAccent, body }) {
   return (
     <section id="about" className="relative bg-forest text-paper py-24 px-6 md:px-8">
+      <SectionWave position="top" />
+      <SectionWave position="bottom" />
       <BackgroundGrid tone="dark" />
       <div className="relative max-w-7xl mx-auto flex flex-col gap-12">
 

@@ -1,5 +1,6 @@
 import { BackgroundGrid } from '../../../shared/components/BackgroundGrid'
 import { CtaButton } from '../../../shared/components/CtaButton'
+import { SectionWave } from '../../../shared/components/SectionWave'
 
 const inputClasses =
   'w-full bg-paper/5 border border-paper/50 rounded-lg px-4 py-3 text-sm text-paper placeholder:text-paper/60 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent transition-colors duration-200'
@@ -27,6 +28,8 @@ function ContactView({
 }) {
   return (
     <section id="contact" className="relative bg-forest text-paper py-24 px-6 md:px-8">
+      <SectionWave position="top" />
+      <SectionWave position="bottom" />
       <BackgroundGrid tone="dark" />
       <div className="relative max-w-7xl mx-auto flex flex-col gap-12">
 
