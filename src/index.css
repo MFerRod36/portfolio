@@ -1,6 +1,12 @@
 @import 'tailwindcss';
 @import './styles/tokens.css';
 
+/* Sticker-style outline that follows the transparent edges of an image */
+@utility sticker-outline {
+  filter: drop-shadow(3px 0 0 var(--color-paper)) drop-shadow(-3px 0 0 var(--color-paper))
+    drop-shadow(0 3px 0 var(--color-paper)) drop-shadow(0 -3px 0 var(--color-paper));
+}
+
 html,
 body {
   background-color: var(--color-paper);
