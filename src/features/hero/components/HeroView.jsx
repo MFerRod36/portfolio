@@ -43,17 +43,17 @@ function HeroView({ badge, headingLines, subtitle, cta: { href, label }, portrai
           {/* Forest circle behind the portrait. The clip box is taller than the circle
               and its bottom is rounded like the circle, so the head breaks out on top
               while the bottom of the illustration follows the circle's curve. */}
-          <div className="relative w-full max-w-sm aspect-square md:max-w-md xl:max-w-lg">
+          <div className="relative w-full max-w-xs aspect-square md:max-w-sm xl:max-w-md">
             <div aria-hidden="true" className="absolute inset-0 rounded-full bg-forest" />
             {portrait.src && (
-              <div className="absolute inset-x-0 bottom-0 h-[170%] overflow-hidden rounded-b-full">
+              <div className="absolute inset-x-0 bottom-0 h-[165%] overflow-hidden rounded-b-full">
                 <img
                   src={portrait.src}
                   alt={portrait.alt}
                   width="1200"
                   height="1200"
                   fetchPriority="high"
-                  className="absolute bottom-0 left-1/2 w-[160%] max-w-none -translate-x-[52%] sticker-outline"
+                  className="absolute bottom-0 left-1/2 w-[155%] max-w-none -translate-x-[52%] sticker-outline"
                 />
               </div>
             )}
