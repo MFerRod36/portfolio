@@ -8,7 +8,7 @@ export function LanguageSwitch({ lang, onToggle }) {
       aria-checked={isEn}
       aria-label={isEn ? 'Switch to Spanish' : 'Cambiar a inglés'}
       onClick={onToggle}
-      className="relative flex h-8 w-16 rounded-full cursor-pointer bg-accent border border-accent hover:brightness-95 transition-[filter] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest"
+      className="relative flex h-8 w-16 rounded-full cursor-pointer bg-paper border border-forest/20 hover:brightness-95 transition-[filter] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest"
     >
       {/* Pearl — rectangular, covers exactly half the pill */}
       <span
