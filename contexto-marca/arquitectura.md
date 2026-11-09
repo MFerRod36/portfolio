@@ -40,7 +40,7 @@ src/
   layout/                 Navbar y Footer (aparecen en toda la página)
     layout.i18n.js        Textos ES/EN del menú y el footer
   shared/
-    components/           Componentes usados por 2+ features (CtaButton, BackgroundGrid, LanguageSwitch)
+    components/           Componentes usados por 2+ features (CtaButton, BackgroundGrid, LanguageSwitch, SectionWave)
     config/               Datos compartidos (nav, socials)
     context/              LangContext
 ```

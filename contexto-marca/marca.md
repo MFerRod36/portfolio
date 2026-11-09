@@ -18,7 +18,7 @@
 | Danger         | `#b42318` | `text-danger`            | —          | Mensajes de error sobre crema (sobre verde se usa `text-accent`) |
 
 **Distribución de secciones:** se alternan para que cada una se separe de la siguiente:
-Hero (crema) → About (verde) → Services (crema) → Contact (verde) → Footer (crema). El Navbar flota en crema con borde verde sutil.
+Hero (crema) → About (verde) → Services (crema) → Contact (verde) → Footer (crema). El corte entre crema y verde es una ola suave (`SectionWave`), nunca una línea recta. El Navbar flota con un degradé horizontal: crema sólido en el centro y transparente hacia los costados, con borde verde sutil.
 
 Los tokens viven en `src/styles/tokens.css`. Cada color nuevo se agrega ahí y en esta tabla.
 
@@ -41,7 +41,7 @@ Los tokens viven en `src/styles/tokens.css`. Cada color nuevo se agrega ahí y e
 - Usar siempre las utilities de los tokens (`bg-forest`), nunca hex sueltos ni `bg-[var(--color-x)]`
 - Sobre crema, el naranja `accent` solo va como relleno (botones) o decoración; el texto naranja usa `accent-strong`. Única excepción, decidida por la marca: la línea en Mencken del H1 del Hero usa `accent` (2.07:1, no cumple WCAG)
 - Texto secundario con opacidad: mínimo `forest/75` sobre crema y `paper/70` sobre verde
-- Fondos planos, sin degradés
+- Fondos planos, sin degradés. Única excepción, decidida por la marca: el fondo del Navbar
 - Anillo de foco: `outline-forest` sobre crema, `outline-accent` sobre verde
 
 ## Tipografía
@@ -64,7 +64,7 @@ Los tokens viven en `src/styles/tokens.css`. Cada color nuevo se agrega ahí y e
 
 - **Dirección:** Claro y cálido con bloques verdes, minimal, editorial
 - **Elemento visual:** Abstracción geométrica. Única imagen figurativa: la ilustración de Fernanda en el Hero, sobre un círculo verde, con la cabeza saliendo por arriba y la base recortada con la curva del círculo
-- **Decoración:** Grid sutil (`BackgroundGrid`), formas geométricas simples, composición tipográfica
+- **Decoración:** Grid sutil (`BackgroundGrid`), olas suaves entre secciones (`SectionWave`), formas geométricas simples, composición tipográfica
 - **Espaciado:** Generoso. `py-24` mínimo en secciones, `gap-8` mínimo entre elementos
 - **Bordes:** `border-forest/15` sobre crema, `border-paper/15` sobre verde
 
