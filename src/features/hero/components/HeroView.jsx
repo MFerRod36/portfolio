@@ -40,19 +40,22 @@ function HeroView({ badge, headingLines, subtitle, cta: { href, label }, portrai
 
         {/* Portrait arch and social column share a bottom edge */}
         <div className="flex items-end justify-center gap-8 md:justify-end">
-          {/* Forest arch behind the portrait; on md+ the portrait is wider than the
-              arch and anchored bottom-right, so its left side breaks out of the shape */}
-          <div className="relative w-full max-w-xs aspect-4/5 md:max-w-sm">
-            <div aria-hidden="true" className="absolute inset-0 rounded-t-full bg-forest" />
+          {/* Forest circle behind the portrait. The clip box is taller than the circle
+              and its bottom is rounded like the circle, so the head breaks out on top
+              while the bottom of the illustration follows the circle's curve. */}
+          <div className="relative w-full max-w-xs aspect-square md:max-w-sm">
+            <div aria-hidden="true" className="absolute inset-0 rounded-full bg-forest" />
             {portrait.src && (
-              <img
-                src={portrait.src}
-                alt={portrait.alt}
-                width="1200"
-                height="1200"
-                fetchPriority="high"
-                className="absolute bottom-0 right-0 w-[130%] max-w-none sticker-outline md:w-[160%]"
-              />
+              <div className="absolute inset-x-0 bottom-0 h-[160%] overflow-hidden rounded-b-full">
+                <img
+                  src={portrait.src}
+                  alt={portrait.alt}
+                  width="1200"
+                  height="1200"
+                  fetchPriority="high"
+                  className="absolute bottom-0 left-1/2 w-[150%] max-w-none -translate-x-[52%] sticker-outline"
+                />
+              </div>
             )}
           </div>
 

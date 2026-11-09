@@ -63,7 +63,7 @@ Los tokens viven en `src/styles/tokens.css`. Cada color nuevo se agrega ahí y e
 ## Estilo visual
 
 - **Dirección:** Claro y cálido con bloques verdes, minimal, editorial
-- **Elemento visual:** Abstracción geométrica. Única foto: un retrato de Fernanda en el Hero, dentro de un arco verde (`rounded-t-full`)
+- **Elemento visual:** Abstracción geométrica. Única imagen figurativa: la ilustración de Fernanda en el Hero, sobre un círculo verde, con la cabeza saliendo por arriba y la base recortada con la curva del círculo
 - **Decoración:** Grid sutil (`BackgroundGrid`), formas geométricas simples, composición tipográfica
 - **Espaciado:** Generoso. `py-24` mínimo en secciones, `gap-8` mínimo entre elementos
 - **Bordes:** `border-forest/15` sobre crema, `border-paper/15` sobre verde
