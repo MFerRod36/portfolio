@@ -20,10 +20,10 @@ export function NavbarView({
       className={[
         'fixed top-4 left-1/2 -translate-x-1/2 z-50',
         'rounded-2xl border transition-all duration-300',
-        'backdrop-blur-2xl',
+        'backdrop-blur-md',
         scrolled
-          ? 'bg-paper/95 border-forest/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_8px_32px_rgba(0,0,0,0.28),0_2px_8px_rgba(0,0,0,0.12)]'
-          : 'bg-paper/85 border-forest/15 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_4px_16px_rgba(0,0,0,0.18)]',
+          ? 'bg-linear-to-r from-transparent via-paper/95 to-transparent border-forest/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_8px_32px_rgba(0,0,0,0.28),0_2px_8px_rgba(0,0,0,0.12)]'
+          : 'bg-linear-to-r from-transparent via-paper/85 to-transparent border-forest/15 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_4px_16px_rgba(0,0,0,0.18)]',
       ].join(' ')}
     >
       <nav className="relative flex items-center gap-2 h-12 px-4">
